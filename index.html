@@ -79,71 +79,59 @@
 
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
+{
+    "@context":  "https://schema.org",
+    "@type":  "ScholarlyArticle",
+    "headline":  "EVPeriscope: Extended Perception across Aerial and Ground Vehicles with Event-based Propeller Tracking",
+    "description":  "EVPeriscope uses event-based propeller tracking to enable relative localization and coordinated control across aerial and ground vehicles.",
+    "author":  [
+                   {
+                       "affiliation":{
+                            "name":  "University of Pennsylvania",
+                            "@type":  "Organization"
+                        },
+                       "name":  "Dexter Ong",
+                       "@type":  "Person"
+                    },
+                    {
+                        "affiliation":  {
+                            "name":  "University of Pennsylvania",
+                            "@type":  "Organization"
+                        },
+                        "name":  "Vijay Kumar",
+                        "@type":  "Person"
+                    },
+                    {
+                        "affiliation":  {
+                            "name":  "University of Pennsylvania",
+                            "@type":  "Organization"
+                                        },
+                        "name":  "Pratik Chaudhari",
+                        "@type":  "Person"
+                    }
+               ],
+    "datePublished":  "2026",
+    "url":  "https://ongdexter.github.io/evperiscope/",
+    "keywords":  [
+                     "field robotics",
+                     "event-based vision",
+                     "aerial robotics",
+                     "neuromorphic vision",
+                     "computer vision"
+                 ],
+    "abstract":  "Reliable relative localization between aerial and ground robots is a key requirement for tightly coordinated heterogeneous teams. This can be difficult to do using conventional frame-based cameras and fiducial markers because they are sensitive to motion blur, lighting variations, and payload constraints. This paper presents EVPeriscope, an event-based perception system that enables detection, localization and control of a quadrotor using an upward-facing event camera on a ground robot by detecting the high-frequency visual signature of its propellers. This system allows the quadrotor to function as an extended perception system for the ground robot when onboard sensors exhibit degradation or occlusion. We demonstrate the capabilities of this marsupial ground-aerial system via experiments in challenging field conditions with wind speeds of up to 15 mph, in both daylight and at night. We show that the system supports localization and closed-loop navigation through dense foliage where the ground robot’s sensors are occluded. Our control system for the quadrotor operates at 200 Hz entirely with onboard sensing and computation.",
+    "isAccessibleForFree":  true
+}
   </script>
 
   <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
+{
+    "@context":  "https://schema.org",
+    "@type":  "Organization",
+    "name":  "GRASP Laboratory, University of Pennsylvania",
+    "url":  "https://www.grasp.upenn.edu/"
+}
   </script>
 </head>
 
@@ -210,7 +198,7 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="https://drive.google.com/file/u/1/d/1HxsL9gdY0HvlqUsuwir866r7UxwZev7N/view?usp=drive_link"
+                    <a href="https://youtu.be/uktTU6Pt0r0"
                       target="_blank" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-video"></i>
@@ -231,7 +219,7 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+          <video playsinline poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
             <source src="static/videos/out_grass.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -298,7 +286,7 @@
             </div>
           </div>
           <div class="column">
-            <video id="event-volume" autoplay controls muted loop preload="metadata"
+            <video playsinline id="event-volume" autoplay controls muted loop preload="metadata"
               style="width: 100%; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-xl);">
               <source src="static/videos/event_volume_stream.mp4" type="video/mp4">
             </video>
@@ -317,7 +305,7 @@
     <section class="hero is-small">
       <div class="hero-body">
         <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
+          <div id="image-carousel" class="carousel results-carousel">
             <div class="item">
               <img src="static/images/epa_overview.png" alt="EVPeriscope overview" loading="lazy" />
               <h2 class="subtitle has-text-centered">
@@ -370,8 +358,9 @@
           <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
               <div class="publication-video">
-                <iframe src="https://drive.google.com/file/d/1HxsL9gdY0HvlqUsuwir866r7UxwZev7N/preview"
-                  frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/uktTU6Pt0r0"
+                  title="EVPeriscope video presentation" referrerpolicy="strict-origin-when-cross-origin"
+                  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </div>
             </div>
           </div>
@@ -386,19 +375,19 @@
       <div class="hero-body">
         <div class="container">
           <h2 class="title is-3">Experiment Videos</h2>
-          <div id="results-carousel" class="carousel results-carousel">
+          <div id="video-carousel" class="carousel results-carousel">
             <div class="item item-video1">
-              <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+              <video playsinline poster="" id="video1" controls muted loop height="100%" preload="metadata">
                 <source src="static/videos/epa_obs.mp4" type="video/mp4">
               </video>
             </div>
             <div class="item item-video2">
-              <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+              <video playsinline poster="" id="video2" controls muted loop height="100%" preload="metadata">
                 <source src="static/videos/epa_land.mp4" type="video/mp4">
               </video>
             </div>
             <div class="item item-video3">
-              <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+              <video playsinline poster="" id="video3" controls muted loop height="100%" preload="metadata">
                 <source src="static/videos/epa_night.mp4" type="video/mp4">
               </video>
             </div>
@@ -453,6 +442,8 @@
     </section>
     <!--End BibTex citation -->
 
+
+  </main>
 
     <footer class="footer">
       <div class="container">
